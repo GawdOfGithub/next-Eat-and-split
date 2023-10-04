@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Navbar from './components/Navbar'
 import Header from './components/Header'
+import { Provider } from './contexts/contextProvider'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -26,6 +27,8 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"></link>
       </head>
+
+     <Provider>
     
       <body className={inter.className}>
         <div className='min-h-screen '>
@@ -35,6 +38,7 @@ export default function RootLayout({
         </div>
        
       </body>
+      </Provider>
     </html>
   )
 }
